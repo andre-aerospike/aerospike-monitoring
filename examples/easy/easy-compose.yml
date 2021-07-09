@@ -11,6 +11,8 @@ services:
     - AS_HOST=${AS_HOST}
     - AS_PORT=3000
     - "METRIC_LABELS=type='development',source='aerospike'"
+    extra_hosts:
+    - "host.docker.internal:host-gateway"
     ports:
     - "9145:9145"
 
@@ -87,5 +89,3 @@ volumes:
 networks:
   aerospike:
     driver: bridge
-    # name: aerospike
-    # external: true
