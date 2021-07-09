@@ -8,7 +8,7 @@ services:
     - aerospike
     container_name: exporter
     environment:
-    - AS_HOST=${AS_HOST}
+    - AS_HOST=host.docker.internal
     - AS_PORT=3000
     - "METRIC_LABELS=type='development',source='aerospike'"
     extra_hosts:
