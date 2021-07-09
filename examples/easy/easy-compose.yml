@@ -25,7 +25,7 @@ services:
     - source: prometheus_data
       target: /var/lib/prometheus/
       type: volume
-    - source: ./config/prometheus/easy-prometheus.yml
+    - source: ./easy-prometheus.yml
       target: /etc/prometheus/prometheus.yml
       type: bind
     - source: ./config/prometheus/aerospike_rules.yml
